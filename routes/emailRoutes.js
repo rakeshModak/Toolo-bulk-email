@@ -85,6 +85,9 @@ router.post("/send-excel-emails", upload.single("file"), async (req, res) => {
     .find({ email: { $in: userEmails } })
     .toArray();
 
+    console.log("Total valid users:", validUsers.length);
+
+
 
 const sampleUsers = [ "691f05d03a9b40275804138d", "603ce613e4305500116ffd9a" ];
 // convert to ObjectIds
