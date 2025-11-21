@@ -45,6 +45,7 @@ services:
     volumes:
       # Mount logs directory if needed
       - ./logs:/app/logs
+      - ./uploads:/app/uploads
 
 networks:
   bulk-email-network:
