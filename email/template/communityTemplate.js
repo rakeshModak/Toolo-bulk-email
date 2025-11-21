@@ -36,7 +36,7 @@ function communityTemplate(name) {
 							<tr>
 								<td class="t_data" style="width: 600px; min-width: 600px; padding: 0; margin: 0; font-size: 0pt; line-height: 0pt;">
 									
-									<a href="https://forms.fillout.com/t/bxaSc4WDghus" target="_blank"><img src="${process.env.BASE_URL}/banner-min.png"  style="max-width: 100%; height: auto;"></a>
+									<a href="https://forms.fillout.com/t/bxaSc4WDghus" target="_blank"><img src="https://toolofrontapi.meancloud.in/uploads/banner-min.png"  style="max-width: 100%; height: auto;"></a>
 								</td>
 							</tr>
 						</tbody>
