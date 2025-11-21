@@ -28,10 +28,10 @@ services:
     container_name: bulk-email-app
     restart: unless-stopped
     ports:
-      - "${PORT:-5004}:5004"
+      - "${PORT:-5012}:5012"
     environment:
       NODE_ENV: production
-      PORT: ${PORT:-5004}
+      PORT: ${PORT:-5012}
       MONGO_URL: ${MONGO_URL}
       DB_NAME: ${DB_NAME:-toolo_dev}
       REDIS_URL: redis://redis:6379

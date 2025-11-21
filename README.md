@@ -58,7 +58,7 @@ docker-compose ps
 ```
 
 You should see three services running:
-- `bulk-email-app` - The main application (port 5004)
+- `bulk-email-app` - The main application (port 5012)
 - `bulk-email-mongodb` - MongoDB database (port 27017)
 - `bulk-email-redis` - Redis queue (port 6379)
 
@@ -115,8 +115,8 @@ docker-compose exec redis redis-cli
 ## 🌐 API Endpoints
 
 Once the application is running, you can access it at:
-- **Base URL:** `http://localhost:5004`
-- **API Routes:** `http://localhost:5004/api/*`
+- **Base URL:** `http://localhost:5012`
+- **API Routes:** `http://localhost:5012/api/*`
 
 ## 📁 Project Structure
 
@@ -142,7 +142,7 @@ bulk-email-firing/
 | `REDIS_URL` | Redis connection URL | `redis://redis:6379` |
 | `ZOHO_EMAIL` | Zoho email for sending | Required |
 | `ZOHO_PASSWORD` | Zoho email password | Required |
-| `PORT` | Application port | `5004` |
+| `PORT` | Application port | `5012` |
 
 ## 🚢 Deployment to Production Server
 
@@ -180,7 +180,7 @@ bulk-email-firing/
 docker-compose logs app
 
 # Check if ports are already in use
-lsof -i :5004
+lsof -i :5012
 lsof -i :27017
 lsof -i :6379
 ```
