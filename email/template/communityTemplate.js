@@ -1,3 +1,4 @@
+console.log("Base url --------->:", process.env.BASE_URL);
 function communityTemplate(name) {
   return `
     <!DOCTYPE html>
@@ -34,6 +35,7 @@ function communityTemplate(name) {
 						<tbody>
 							<tr>
 								<td class="t_data" style="width: 600px; min-width: 600px; padding: 0; margin: 0; font-size: 0pt; line-height: 0pt;">
+									
 									<a href="https://forms.fillout.com/t/bxaSc4WDghus" target="_blank"><img src="${process.env.BASE_URL}/banner-min.png"  style="max-width: 100%; height: auto;"></a>
 								</td>
 							</tr>
@@ -52,6 +54,7 @@ function communityTemplate(name) {
 											<tr>
 												<td align="left" valign="top" style="font-size: 16px; line-height: 22px; font-weight: 700; color: #000; padding-bottom: 10px;">
 													Hello ! 
+													<p>${process.env.BASE_URL}</p>
 												</td>
 											</tr>
 											<tr>
