@@ -28,7 +28,7 @@ services:
     container_name: bulk-email-app
     restart: unless-stopped
     ports:
-      - "${PORT:-5012}:5012"
+      -"5012:5012"
     environment:
       NODE_ENV: production
       PORT: ${PORT:-5012}
