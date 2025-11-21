@@ -81,6 +81,9 @@ Tickets at just ₹350 per person.
 <div style="height:8px; display:block;"></div> 
 For any queries, feel free to reach out at <a href="tel:918296479820" style="font-weight: 700; color: #000;" target="_blank">8296479820</a><br/>
 We can’t wait to celebrate with you! 🎉📚✨
+<br/>
+Warm regards,<br/>
+<b>Team Töölö</b>
 												</td>
 											</tr>
                                             <tr>
