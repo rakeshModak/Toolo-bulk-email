@@ -36,7 +36,7 @@ function communityTemplate(name) {
 							<tr>
 								<td class="t_data" style="width: 600px; min-width: 600px; padding: 0; margin: 0; font-size: 0pt; line-height: 0pt;">
 									
-									<a href="https://forms.fillout.com/t/bxaSc4WDghus" target="_blank"><img src="https://toolofrontapi.meancloud.in/uploads/banner-min.png"  style="max-width: 100%; height: auto;"></a>
+									<a href="https://forms.fillout.com/t/bxaSc4WDghus" target="_blank"><img src="https://toolofrontapi.meancloud.in/uploads/banner.png"  style="max-width: 100%; height: auto;"></a>
 								</td>
 							</tr>
 						</tbody>
@@ -83,7 +83,7 @@ For any queries, feel free to reach out at <a href="tel:918296479820" style="fon
 We can’t wait to celebrate with you! 🎉📚✨
 <br/>
 Warm regards,<br/>
-<b>Team Töölö</b>
+<b style="font-weight: 700; color: #000;">Team Töölö</b>
 												</td>
 											</tr>
                                             <tr>
