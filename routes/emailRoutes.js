@@ -59,7 +59,7 @@ const sampleUserObjectIds = sampleUsers.map(id => new ObjectId(id));
 
 router.post("/send-excel-emails", upload.single("file"), async (req, res) => {
 
-  const subject = req.body.subject || "Community Update";
+  const subject = req.body.subject || "Join Us for a Magical 2-Day Birthday Bash at Töölö- Bellandur Library!";
   // get data from excel file in req.file
 
   const xlsx = require("xlsx");
