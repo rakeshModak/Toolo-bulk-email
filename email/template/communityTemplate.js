@@ -54,7 +54,6 @@ function communityTemplate(name) {
 											<tr>
 												<td align="left" valign="top" style="font-size: 16px; line-height: 22px; font-weight: 700; color: #000; padding-bottom: 10px;">
 													Hello ! 
-													<p>${process.env.BASE_URL}</p>
 												</td>
 											</tr>
 											<tr>
