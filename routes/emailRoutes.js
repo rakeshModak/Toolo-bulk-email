@@ -68,7 +68,7 @@ router.post("/send-excel-emails", upload.single("file"), async (req, res) => {
   const worksheet = workbook.Sheets[sheetName];
   const data = xlsx.utils.sheet_to_json(worksheet);
 
-  console.log("Excel data rows:", data);
+  // console.log("Excel data rows:", data);
 
   const users = data.map(row => ({
     fullName: row["Full Name"],
