@@ -110,7 +110,7 @@ const sampleUserObjectIds = sampleUsers.map(id => new ObjectId(id));
       createdAt: new Date()
     });
 
-    const job = await emailQueue.add("community-emails", jobData);
+    const job = await emailQueue.add("send-email", jobData);
     console.log(`📤 Job produced → ID: ${job.id}, Email: ${user.email}`);
   }
 
