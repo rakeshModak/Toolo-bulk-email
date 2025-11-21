@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  # Redis Service
+  redis:
+    image: redis:7-alpine
+    container_name: bulk-email-redis
+    restart: unless-stopped
+    ports:
+      - "6383:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - bulk-email-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 20s
+    command: redis-server --appendonly yes
+
+  # Main Application Service
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bulk-email-app
+    restart: unless-stopped
+    ports:
+      - "${PORT:-5004}:5004"
+    environment:
+      NODE_ENV: production
+      PORT: ${PORT:-5004}
+      MONGO_URL: ${MONGO_URL}
+      DB_NAME: ${DB_NAME:-toolo_dev}
+      REDIS_URL: redis://redis:6379
+      ZOHO_EMAIL: ${ZOHO_EMAIL}
+      ZOHO_PASSWORD: ${ZOHO_PASSWORD}
+    depends_on:
+      redis:
+        condition: service_healthy
+    networks:
+      - bulk-email-network
+    volumes:
+      # Mount logs directory if needed
+      - ./logs:/app/logs
+
+networks:
+  bulk-email-network:
+    driver: bridge
+
+volumes:
+  redis_data:
+    driver: local
