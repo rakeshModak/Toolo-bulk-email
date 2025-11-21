@@ -22,17 +22,19 @@ const path = require("path");
         // add 2 sec setTimeout to simulate delay
         console.log('Delaying for 2 seconds to simulate email sending...');
         await new Promise(resolve => setTimeout(resolve, 2000));
-        await sendEmail({
-          email: record.email,
-          subject: record.subject,
-          html: record.html,
-          attachments: [
-            {
-              filename: 'Schedule.png',
-              path: path.join(__dirname, '../email/template/img/scheduled.png')
-            }
-          ]
-        });
+        // await sendEmail({
+        //   email: record.email,
+        //   subject: record.subject,
+        //   html: record.html,
+        //   attachments: [
+        //     {
+        //       filename: 'Schedule.png',
+        //       path: path.join(__dirname, '../email/template/img/scheduled.png')
+        //     }
+        //   ]
+        // });
+
+        console.log(`Email sent to ${record.email}`);
 
         // Update in DB
         await db.collection("email_logs").updateOne(
