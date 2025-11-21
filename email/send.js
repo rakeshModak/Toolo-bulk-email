@@ -2,7 +2,7 @@ const transporter = require("./zoho.js");
 
 async function sendEmail({ email, subject, html, attachments }) {
   const mailOptions = {
-    from: `"Toolo" <${process.env.ZOHO_EMAIL}>`,
+    from: `Töölö`,
     to: email,
     subject,
     html
