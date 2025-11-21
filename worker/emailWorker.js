@@ -28,8 +28,8 @@ const path = require("path");
           html: record.html,
           attachments: [
             {
-              filename: 'schedule-min.png',
-              path: path.join(__dirname, '../email/template/img/schedule-min.png')
+              filename: 'Schedule.png',
+              path: path.join(__dirname, '../email/template/img/scheduled.png')
             }
           ]
         });
